@@ -16,7 +16,6 @@ because this Phase 3 draft is being prepared before changing production code.
 The selected target is `BoykovKolmogorovMFImpl`, especially:
 
 ```text
-grow()
 adopt()
 ```
 
@@ -28,7 +27,6 @@ Brain Method / Long Method with duplicated source-tree and sink-tree conditional
 
 This target is supported by both tool output and manual inspection:
 
-- SonarQube reports high cognitive complexity for `grow()`.
 - SonarQube reports high cognitive complexity and Brain Method for `adopt()`.
 - PMD reports nested conditional issues inside `adopt()`.
 - Manual inspection shows duplicated source-tree and sink-tree branches with reversed edge
@@ -39,8 +37,6 @@ This target is supported by both tool output and manual inspection:
 The selected methods are not only failing static-analysis thresholds. They also contain real
 maintainability problems:
 
-- `grow()` combines source-tree growth, sink-tree growth, bounding-edge detection, free-vertex
-  insertion, and distance-heuristic parent updates.
 - `adopt()` combines orphan selection, source-tree adoption, sink-tree adoption, parent search,
   free-vertex conversion, neighbor activation, and child-orphan creation.
 - Both methods require the reader to compare source-tree and sink-tree branches manually.
@@ -98,20 +94,8 @@ means no valid parent was found.
 
 ## 6. Planned Changes
 
-### 6.1 `grow()`
 
-The planned `grow()` refactor will:
-
-- Keep the main `grow()` loop responsible for active-vertex iteration.
-- Extract source-tree processing into `growSourceTree()`.
-- Extract sink-tree processing into `growSinkTree()`.
-- Extract the repeated free-vertex growth assignments into `growTreeVertex()`.
-- Extract the distance-heuristic parent update into `updateParentIfCloser()`.
-
-This reduces the amount of branching inside `grow()` while preserving the active-vertex order and
-the condition for returning a bounding edge.
-
-### 6.2 `adopt()`
+### 6.1 `adopt()`
 
 The planned `adopt()` refactor will:
 

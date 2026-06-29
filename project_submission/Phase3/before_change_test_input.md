@@ -5,7 +5,6 @@
 The selected refactoring target is:
 
 - `BoykovKolmogorovMFImpl.adopt()`
-- `BoykovKolmogorovMFImpl.grow()`
 
 Both methods are private methods inside:
 
