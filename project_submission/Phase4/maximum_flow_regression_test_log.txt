@@ -1,0 +1,38 @@
+PHASE 4 - BROADER MAXIMUM-FLOW REGRESSION TEST LOG
+==================================================
+
+Execution date: 2026-06-25
+Revision: 6183e894718be159d82a2182a72ca3bfb08b2a90
+Branch: refactor-boykov-kolmogorov-adopt
+
+Command:
+mvn -pl jgrapht-core "-Dtest=org.jgrapht.alg.flow.*MFImplTest,org.jgrapht.alg.flow.MaximumFlowAlgorithmTest" test
+
+Relevant Maven output:
+
+[INFO] Running org.jgrapht.alg.flow.BoykovKolmogorovMFImplTest
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running org.jgrapht.alg.flow.DinicMFImplTest
+[INFO] Tests run: 26, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running org.jgrapht.alg.flow.EdmondsKarpMFImplTest
+[INFO] Tests run: 22, Failures: 0, Errors: 0, Skipped: 0
+[INFO] Running org.jgrapht.alg.flow.PushRelabelMFImplTest
+[INFO] Tests run: 23, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 102, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  21.621 s
+[INFO] Finished at: 2026-06-25T03:19:21+06:00
+[INFO] ------------------------------------------------------------------------
+
+Interpretation:
+
+- The refactored implementation passed all 102 selected maximum-flow tests.
+- The focused Boykov-Kolmogorov behavior remained correct.
+- Other maximum-flow implementations and shared maximum-flow test behavior
+  also remained unaffected.

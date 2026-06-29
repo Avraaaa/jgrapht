@@ -1,0 +1,41 @@
+PHASE 4 - ORIGINAL VERSION EXECUTION LOG
+========================================
+
+Execution date: 2026-06-25
+Original revision: 3215ef7eebdbaaf11f95d92d614fc552e8d9006e
+Revision description: master, before the orphan-adoption refactor
+Worktree: C:\tmp\jgrapht-phase4-master
+
+Command:
+mvn -pl jgrapht-core "-Dtest=org.jgrapht.alg.flow.BoykovKolmogorovMFImplTest" test
+
+Relevant Maven output:
+
+[INFO] Running org.jgrapht.alg.flow.BoykovKolmogorovMFImplTest
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.553 s
+[INFO]
+[INFO] Results:
+[INFO]
+[INFO] Tests run: 31, Failures: 0, Errors: 0, Skipped: 0
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:07 min
+[INFO] Finished at: 2026-06-25T03:21:11+06:00
+[INFO] ------------------------------------------------------------------------
+
+Interpretation:
+
+- The original implementation compiled successfully.
+- All 31 Boykov-Kolmogorov maximum-flow tests passed.
+- The test class checks directed and undirected graphs through the public
+  MaximumFlowAlgorithm API.
+- This result is the independently rerun baseline for comparison with the
+  refactored revision.
+
+Compilation note:
+
+The clean worktree produced existing compiler warnings in unrelated JGraphT
+classes. They did not cause compilation or test failures and are outside the
+scope of the orphan-adoption refactor.
