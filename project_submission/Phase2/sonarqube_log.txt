@@ -1,0 +1,52 @@
+﻿COMMAND:
+$env:SONAR_TOKEN='User_Token here'
+mvn -DskipTests "-Dsonar.projectKey=jgrapht" "-Dsonar.projectName=jgrapht" "-Dsonar.host.url=http://localhost:9000" "-Dsonar.token=User_Token here" org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+
+TERMINAL OUTPUT:
+[INFO] Scanning for projects...
+[INFO] Reactor Build Order:
+[INFO] JGraphT - Parent                                                   [pom]
+[INFO] JGraphT - Core                                                     [jar]
+[INFO] JGraphT - I/O                                                      [jar]
+[INFO] JGraphT - OSM                                                      [jar]
+[INFO] JGraphT - Optimized Graphs                                         [jar]
+[INFO] JGraphT - Ext                                                      [jar]
+[INFO] JGraphT - Guava Adapter                                            [jar]
+[INFO] JGraphT - Unimi dsi                                                [jar]
+[INFO] JGraphT - Demo                                                     [jar]
+[INFO] JGraphT - Distributable Archives                                   [pom]
+[INFO] --- sonar:5.7.0.6970:sonar (default-cli) @ jgrapht ---
+[INFO] Java 25.0.2 Oracle Corporation (64-bit)
+[INFO] Windows 11 10.0 (amd64)
+[INFO] Communicating with SonarQube Community Build 26.6.0.123539
+[INFO] Project key: jgrapht
+[INFO] Base dir: E:\avra\2-2\dp\opensource\jgrapht
+[INFO] Working dir: E:\avra\2-2\dp\opensource\jgrapht\target\sonar
+[INFO] Quality profile for java: Sonar way
+[INFO] Quality profile for web: Sonar way
+[INFO] Quality profile for xml: Sonar way
+[INFO] Quality profile for yaml: Sonar way
+[INFO] 1019 files indexed
+[INFO] SCM revision ID 'e3adbc2f409a06a23d8c6b4ecef9420d2bdc893a'
+[INFO] Analysis report generated in 2843ms, dir size=17.9 MB
+[INFO] Analysis report compressed in 161703ms, zip size=6.4 MB
+[INFO] Analysis report uploaded in 1209ms
+[INFO] ANALYSIS SUCCESSFUL, you can find the results at: http://localhost:9000/dashboard?id=jgrapht
+[INFO] More about the report processing at http://localhost:9000/api/ce/task?id=96c9d44b-368f-4a8c-b5a0-9c89c6f6319d
+[INFO] Analysis total time: 7:26.279 s
+[INFO] SonarScanner Engine completed successfully
+[INFO] BUILD SUCCESS
+EXIT CODE: 0
+
+COMMAND:
+$token = 'User_Token here'
+$basic = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("$token`:"))
+$headers = @{ Authorization = "Basic $basic" }
+Invoke-RestMethod -Uri "http://localhost:9000/api/ce/task?id=96c9d44b-368f-4a8c-b5a0-9c89c6f6319d" -Headers $headers
+Invoke-RestMethod -Uri "http://localhost:9000/api/issues/search?componentKeys=jgrapht&types=CODE_SMELL&resolved=false&ps=500&p=<page>&additionalFields=_all" -Headers $headers
+Set-Content -Path sonarqube.txt -Value <all unresolved CODE_SMELL issues> -Encoding UTF8
+
+TERMINAL OUTPUT:
+CE task status: SUCCESS
+Wrote sonarqube.txt with 5840 unresolved CODE_SMELL issues.
+EXIT CODE: 0

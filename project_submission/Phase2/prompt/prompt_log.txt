@@ -1,0 +1,49 @@
+I checked the repository layout and confirmed this is a multi-module Maven project. To generate the SonarQube code smell output and PMD output as text files, run the commands below from the repository root:
+
+```powershell
+$env:SONAR_TOKEN='User_Token here'
+mvn -DskipTests "-Dsonar.projectKey=jgrapht" "-Dsonar.projectName=jgrapht" "-Dsonar.host.url=http://localhost:9000" "-Dsonar.token=$env:SONAR_TOKEN" org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+```
+
+After the SonarQube analysis finishes, wait for the compute task to complete, then export unresolved code smells from the SonarQube API:
+
+```powershell
+$token = 'User_Token here'
+$basic = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("$token`:"))
+$headers = @{ Authorization = "Basic $basic" }
+$projectKey = 'jgrapht'
+$pageSize = 500
+$page = 1
+$issues = @()
+$total = $null
+
+while ($true) {
+  $uri = "http://localhost:9000/api/issues/search?componentKeys=$projectKey&types=CODE_SMELL&resolved=false&ps=$pageSize&p=$page&additionalFields=_all"
+  $response = Invoke-RestMethod -Uri $uri -Headers $headers
+  if ($null -eq $total) { $total = [int]$response.total }
+  $issues += @($response.issues)
+  if ($issues.Count -ge $total -or @($response.issues).Count -eq 0) { break }
+  $page++
+}
+
+$issues | ForEach-Object {
+  $file = $_.component -replace '^jgrapht:', ''
+  $line = if ($_.line) { $_.line } elseif ($_.textRange -and $_.textRange.startLine) { $_.textRange.startLine } else { 'n/a' }
+  "$file:$line | $($_.severity) | $($_.rule) | $($_.message)"
+} | Set-Content -Path sonarqube.txt -Encoding UTF8
+```
+
+For PMD, run:
+
+```powershell
+mvn pmd:check *> pmd_output.txt
+```
+
+This writes the PMD terminal output, including violations, into `pmd_output.txt`.
+
+Expected output files:
+
+```text
+sonarqube.txt
+pmd_output.txt
+```

@@ -1,0 +1,421 @@
+﻿COMMAND:
+mvn pmd:check
+
+TERMINAL OUTPUT:
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] JGraphT - Parent                                                   [pom]
+[INFO] JGraphT - Core                                                     [jar]
+[INFO] JGraphT - I/O                                                      [jar]
+[INFO] JGraphT - OSM                                                      [jar]
+[INFO] JGraphT - Optimized Graphs                                         [jar]
+[INFO] JGraphT - Ext                                                      [jar]
+[INFO] JGraphT - Guava Adapter                                            [jar]
+[INFO] JGraphT - Unimi dsi                                                [jar]
+[INFO] JGraphT - Demo                                                     [jar]
+[INFO] JGraphT - Distributable Archives                                   [pom]
+[INFO] 
+[INFO] ------------------------< org.jgrapht:jgrapht >-------------------------
+[INFO] Building JGraphT - Parent 1.6.0-SNAPSHOT                          [1/10]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> pmd:3.28.0:check (default-cli) > :pmd @ jgrapht >>>
+[INFO] 
+[INFO] --- pmd:3.28.0:pmd (pmd) @ jgrapht ---
+[INFO] Skipping org.apache.maven.plugins:maven-pmd-plugin:3.28.0:pmd report goal
+[INFO] 
+[INFO] <<< pmd:3.28.0:check (default-cli) < :pmd @ jgrapht <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.28.0:check (default-cli) @ jgrapht ---
+[INFO] 
+[INFO] ----------------------< org.jgrapht:jgrapht-core >----------------------
+[INFO] Building JGraphT - Core 1.6.0-SNAPSHOT                            [2/10]
+[INFO]   from jgrapht-core\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> pmd:3.28.0:check (default-cli) > :pmd @ jgrapht-core >>>
+[INFO] 
+[INFO] --- pmd:3.28.0:pmd (pmd) @ jgrapht-core ---
+[WARNING] Unable to locate Source XRef to link to -- DISABLED
+[INFO] PMD version: 7.17.0
+[INFO] Rendering content with org.apache.maven.skins:maven-fluido-skin:jar:2.0.0-M9 skin
+[INFO] 
+[INFO] <<< pmd:3.28.0:check (default-cli) < :pmd @ jgrapht-core <<<
+[INFO] 
+[INFO] 
+[INFO] --- pmd:3.28.0:check (default-cli) @ jgrapht-core ---
+[WARNING] PMD Failure: org.jgrapht.GraphMetrics:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.GraphMetrics:165 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.GraphTests:376 Rule:EmptyControlStatement Priority:3 Empty for statement.
+[WARNING] PMD Failure: org.jgrapht.Graphs:315 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'getOppositeVertex' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.Graphs:410 Rule:UselessParentheses Priority:4 Useless parentheses around `g.getEdgeSource(e).equals(v)`..
+[WARNING] PMD Failure: org.jgrapht.Graphs:410 Rule:UselessParentheses Priority:4 Useless parentheses around `g.getEdgeTarget(e).equals(v)`..
+[WARNING] PMD Failure: org.jgrapht.Graphs:456 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'predecessorListOf' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.Graphs:457 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'successorListOf' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:40 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'addGraphListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:47 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'addVertexSetListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:54 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'removeGraphListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:61 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'removeVertexSetListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.ChordalGraphMaxCliqueFinder:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.ChordalGraphMaxCliqueFinder:25 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.CliqueMinimalSeparatorDecomposition:272 Rule:UselessParentheses Priority:4 Useless parentheses around `component.size() > 0`..
+[WARNING] PMD Failure: org.jgrapht.alg.clique.CliqueMinimalSeparatorDecomposition:348 Rule:UselessParentheses Priority:4 Useless parentheses around `chordalGraph.edgeSet().size() == graph.edgeSet(...`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:102 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:102 Rule:UselessParentheses Priority:4 Useless parentheses around `ki * kj`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:149 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:150 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.color.BrownBacktrackColoring:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ChordalGraphColoring:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ChordalGraphColoring:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ColorRefinementAlgorithm:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ColorRefinementAlgorithm:25 Rule:UnnecessaryImport Priority:4 Unused import 'java.util.stream.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.LargestDegreeFirstColoring:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.SaturationDegreeColoring:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.SmallestDegreeLastColoring:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.AbstractStrongConnectivityInspector:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.ConnectivityInspector:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.GabowStrongConnectivityInspector:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.KosarajuStrongConnectivityInspector:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.AhujaOrlinSharmaCyclicExchangeLocalAugmentation:212 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.AhujaOrlinSharmaCyclicExchangeLocalAugmentation:273 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:174 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:387 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:556 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:710 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.ChordalGraphMinimalVertexSeparatorFinder:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.ChordalityInspector:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.HawickJamesSimpleCycles:97 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.HawickJamesSimpleCycles:155 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.JohnsonSimpleCycles:279 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles:221 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.TiernanSimpleCycles:171 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.densesubgraph.GoldbergMaximumDensitySubgraphAlgorithmBase:233 Rule:UselessParentheses Priority:4 Duplicate parentheses around `upper - lower`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.BoykovKolmogorovMFImpl:492 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.BoykovKolmogorovMFImpl:548 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.GusfieldEquivalentFlowTree:83 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'lastInvokedSource'..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.GusfieldEquivalentFlowTree:84 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'lastInvokedTarget'..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.MaximumFlowAlgorithmBase:210 Rule:UselessParentheses Priority:4 Useless parentheses around `(comparator.compare(edge.flow, 0.0) == 0) || (c...`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PadbergRaoOddMinimumCutset:169 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'PadbergRaoOddMinimumCutset': 'isOddVertexSet' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PadbergRaoOddMinimumCutset:236 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'PadbergRaoOddMinimumCutset': 'isOddVertexSet' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:259 Rule:UselessParentheses Priority:4 Useless parentheses around `(ex.getSource().excess >= 0.0) && (ex.getTarget...`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:332 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:412 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.mincost.CapacityScalingMinimumCostFlow:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.independentset.ChordalGraphIndependentSetFinder:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.interfaces.HamiltonianCycleImprovementAlgorithm:49 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'improveTour': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.ColorRefinementIsomorphismInspector:259 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.IsomorphicGraphMapping:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2GraphIsomorphismState:45 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2GraphIsomorphismState:46 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2State:429 Rule:UselessParentheses Priority:4 Useless parentheses around `new String(indent)`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2SubgraphIsomorphismState:45 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2SubgraphIsomorphismState:46 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.lca.EulerTourRMQLCAFinder:112 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'org.jgrapht.util': 'MathUtil' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.DenseEdmondsMaximumCardinalityMatching:25 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.GreedyWeightedMatching:137 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.HopcroftKarpMaximumCardinalityBipartiteMatching:189 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.HopcroftKarpMaximumCardinalityBipartiteMatching:213 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.KuhnMunkresMatrixImplementation:406 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.SparseEdmondsMaximumCardinalityMatching:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:299 Rule:UselessParentheses Priority:4 Useless parentheses around `path1[hw] != strue && path2[hv] != strue`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:382 Rule:UselessParentheses Priority:4 Useless parentheses around `numberOfUnlabeled == 2 ? 0 : 2`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:390 Rule:UselessParentheses Priority:4 Useless parentheses around `numberOfUnlabeled <= 2 ? 2 : 3`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.SparseEdmondsMaximumCardinalityMatching:534 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:137 Rule:UselessParentheses Priority:4 Useless parentheses around `root.tree.eps`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:159 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:200 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:292 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:314 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:320 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVInitializer:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.alg.matching.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:145 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'MatchingAlgorithm': 'DEFAULT_EPSILON' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:432 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.partition.BipartitePartitioning:76 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.alg.scoring.BetweennessCentrality:270 Rule:UselessParentheses Priority:4 Useless parentheses around `sigma.get(v).doubleValue() / sigma.get(w).doubl...`..
+[WARNING] PMD Failure: org.jgrapht.alg.scoring.Algorithm:247 Rule:UselessParentheses Priority:4 Useless parentheses around `sigma.get(v).doubleValue() / sigma.get(w).doubl...`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.AllDirectedPaths:174 Rule:UselessParentheses Priority:4 Useless parentheses around `sourceVertices.isEmpty()`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.AllDirectedPaths:174 Rule:UselessParentheses Priority:4 Useless parentheses around `targetVertices.isEmpty()`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.BoundedPrunedYenKShortestPath:194 Rule:UnusedFormalParameter Priority:3 Avoid unused method parameters such as 'sink'..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.BoundedPrunedYenKShortestPath:339 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.CHManyToManyShortestPaths:29 Rule:UnnecessaryImport Priority:4 Unused static import 'org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionHierarchyBidirectionalDijkstra:32 Rule:UnnecessaryImport Priority:4 Unused static import 'org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation:409 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionTask:1207 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * taskId`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionTask:1219 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * (taskId + 1)`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.DeltaSteppingShortestPath:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.DeltaSteppingShortestPath:89 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'DEFAULT_PARALLELISM'..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.EppsteinShortestPathIterator:415 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.MartinShortestPath:83 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'BaseMultiObjectiveShortestPathAlgorithm': 'GRAPH_MUST_CONTAIN_THE_SOURCE_VERTEX' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.PathValidator:49 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'isValidPath': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:18 Rule:TooManyStaticImports Priority:3 Too many static imports may lead to messy code.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:1296 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * taskId`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:1308 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * (taskId + 1)`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingShortestPath:18 Rule:TooManyStaticImports Priority:3 Too many static imports may lead to messy code.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TreeMeasurer:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.spanning.ImprovementGraph:1126 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.spanning.GreedyMultiplicativeSpanner:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.ChristofidesThreeHalvesApproxMetricTSP:26 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:171 Rule:UselessParentheses Priority:4 Useless parentheses around `j == 0 ? tour[i - 1] : tour[j - 1]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:172 Rule:UselessParentheses Priority:4 Useless parentheses around `j == i ? tour[0] : tour[j]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:176 Rule:UselessParentheses Priority:4 Useless parentheses around `x == y ? 0 : allDist[x][y]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.GreedyHeuristicTSP:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.PalmerHamiltonianCycle:96 Rule:EmptyControlStatement Priority:3 Empty while statement.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.TwoApproxMetricTSP:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:95 Rule:UselessParentheses Priority:4 Useless parentheses around `ux.neighbors.get(vx).equals(vx.neighbors.get(ux))`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:101 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.size() == vertexEncapsulationMap.s...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:109 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().allMatch(ux -> vx...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:135 Rule:UselessParentheses Priority:4 Useless parentheses around `!workingGraph.parallelStream().anyMatch(ux -> u...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:108 Rule:UselessParentheses Priority:4 Useless parentheses around `ux.neighbors.get(vx).intValue() == vx.neighbors...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:114 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.size() == vertexEncapsulationMap.s...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:122 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().allMatch(ux -> vx...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:145 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().noneMatch(ux -> u...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.util.RatioVertex:20 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.util.RatioVertex:77 Rule:UselessParentheses Priority:4 Useless parentheses around `neighbors.values().stream().mapToInt(Integer::i...`..
+[WARNING] PMD Failure: org.jgrapht.generate.CompleteBipartiteGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomBipartiteGraphGenerator:185 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomGraphGenerator:226 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomGraphGenerator:275 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomBipartiteGraphGenerator:157 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomGraphGenerator:153 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomGraphGenerator:171 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.KleinbergSmallWorldGraphGenerator:169 Rule:UselessParentheses Priority:4 Useless parentheses around `j + dj`..
+[WARNING] PMD Failure: org.jgrapht.generate.PlantedPartitionGraphGenerator:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:110 Rule:UselessParentheses Priority:4 Useless parentheses around `n * d`..
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:259 Rule:UselessParentheses Priority:4 Useless parentheses around `n * d`..
+[WARNING] PMD Failure: org.jgrapht.generate.WattsStrogatzGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGenerator:456 Rule:UselessParentheses Priority:4 Useless parentheses around `6 * transshipmentNodeNum`..
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGenerator:540 Rule:JumbledIncrementer Priority:3 Avoid modifying an outer loop incrementer in an inner loop for update expression.
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGeneratorConfig:369 Rule:UselessParentheses Priority:4 Useless parentheses around `tNodeNum - 1`..
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGeneratorConfig:370 Rule:UselessParentheses Priority:4 Useless parentheses around `sinkNum - 1`..
+[WARNING] PMD Failure: org.jgrapht.graph.AbstractGraph:225 Rule:UselessParentheses Priority:4 Useless parentheses around `pairing`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsSubgraph:261 Rule:UselessParentheses Priority:4 Useless parentheses around `base.getEdgeSource(e) == sourceVertex`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsSubgraph:262 Rule:UselessParentheses Priority:4 Useless parentheses around `base.getEdgeTarget(e) == targetVertex`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsUndirectedGraph:134 Rule:UselessOverridingMethod Priority:3 Overriding method merely calls super.
+[WARNING] PMD Failure: org.jgrapht.graph.AsUnweightedGraph:60 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DefaultListenableGraph:125 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DefaultListenableGraph:137 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DirectedAcyclicGraph:483 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.graph.Region:888 Rule:UselessParentheses Priority:4 Useless parentheses around `finish - start`..
+[WARNING] PMD Failure: org.jgrapht.graph.VisitedArrayListImpl:1015 Rule:UselessParentheses Priority:4 Useless parentheses around `affectedRegion.finish - affectedRegion.start`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:106 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList.isEmpty() ? null : vertexList.get(0)`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:107 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList.isEmpty() ? null : vertexList.get(ve...`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:169 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeList != null ? edgeList : GraphPath.super.g...`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:175 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList != null ? vertexList : GraphPath.sup...`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:270 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:281 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:301 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:312 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.builder.GraphBuilder:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.graph.*'.
+[WARNING] PMD Failure: org.jgrapht.graph.builder.GraphBuilder:23 Rule:UnnecessaryImport Priority:4 Unused import 'java.util.function.*'.
+[WARNING] PMD Failure: org.jgrapht.traverse.BreadthFirstIterator:96 Rule:UselessParentheses Priority:4 Useless parentheses around `edge == null ? 0 : getSeenData(Graphs.getOpposi...`..
+[WARNING] PMD Failure: org.jgrapht.traverse.CrossComponentIterator:219 Rule:UselessParentheses Priority:4 Useless parentheses around `isCrossComponentTraversal()`..
+[WARNING] PMD Failure: org.jgrapht.traverse.VisitColor:51 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'static' on enum 'VisitColor': nested enums are implicitly static.
+[WARNING] PMD Failure: org.jgrapht.traverse.DepthFirstIterator:163 Rule:UselessParentheses Priority:4 Useless parentheses around `found`..
+[WARNING] PMD Failure: org.jgrapht.traverse.MaximumCardinalityIterator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.util.ReversedDoublyLinkedListView:2047 Rule:UselessOverridingMethod Priority:3 Overriding method merely calls super.
+[WARNING] PMD Failure: org.jgrapht.GraphMetrics:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.GraphMetrics:165 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.GraphTests:376 Rule:EmptyControlStatement Priority:3 Empty for statement.
+[WARNING] PMD Failure: org.jgrapht.Graphs:315 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'getOppositeVertex' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.Graphs:410 Rule:UselessParentheses Priority:4 Useless parentheses around `g.getEdgeSource(e).equals(v)`..
+[WARNING] PMD Failure: org.jgrapht.Graphs:410 Rule:UselessParentheses Priority:4 Useless parentheses around `g.getEdgeTarget(e).equals(v)`..
+[WARNING] PMD Failure: org.jgrapht.Graphs:456 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'predecessorListOf' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.Graphs:457 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graphs': 'successorListOf' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:40 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'addGraphListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:47 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'addVertexSetListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:54 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'removeGraphListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.ListenableGraph:61 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'removeVertexSetListener': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.ChordalGraphMaxCliqueFinder:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.ChordalGraphMaxCliqueFinder:25 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.clique.CliqueMinimalSeparatorDecomposition:272 Rule:UselessParentheses Priority:4 Useless parentheses around `component.size() > 0`..
+[WARNING] PMD Failure: org.jgrapht.alg.clique.CliqueMinimalSeparatorDecomposition:348 Rule:UselessParentheses Priority:4 Useless parentheses around `chordalGraph.edgeSet().size() == graph.edgeSet(...`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:102 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:102 Rule:UselessParentheses Priority:4 Useless parentheses around `ki * kj`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:149 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.clustering.GreedyModularityAlgorithm:150 Rule:UselessParentheses Priority:4 Useless parentheses around `m`..
+[WARNING] PMD Failure: org.jgrapht.alg.color.BrownBacktrackColoring:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ChordalGraphColoring:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ChordalGraphColoring:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ColorRefinementAlgorithm:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.ColorRefinementAlgorithm:25 Rule:UnnecessaryImport Priority:4 Unused import 'java.util.stream.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.LargestDegreeFirstColoring:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.SaturationDegreeColoring:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.color.SmallestDegreeLastColoring:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.AbstractStrongConnectivityInspector:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.ConnectivityInspector:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.GabowStrongConnectivityInspector:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.connectivity.KosarajuStrongConnectivityInspector:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.AhujaOrlinSharmaCyclicExchangeLocalAugmentation:212 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.AhujaOrlinSharmaCyclicExchangeLocalAugmentation:273 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:174 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:387 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:556 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.BergeGraphInspector:710 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.ChordalGraphMinimalVertexSeparatorFinder:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.ChordalityInspector:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.HawickJamesSimpleCycles:97 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.HawickJamesSimpleCycles:155 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.JohnsonSimpleCycles:279 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.SzwarcfiterLauerSimpleCycles:221 Rule:ClassCastExceptionWithToArray Priority:3 This usage of the Collection.toArray() method will throw a ClassCastException..
+[WARNING] PMD Failure: org.jgrapht.alg.cycle.TiernanSimpleCycles:171 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.densesubgraph.GoldbergMaximumDensitySubgraphAlgorithmBase:233 Rule:UselessParentheses Priority:4 Duplicate parentheses around `upper - lower`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.BoykovKolmogorovMFImpl:492 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.BoykovKolmogorovMFImpl:548 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.GusfieldEquivalentFlowTree:83 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'lastInvokedSource'..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.GusfieldEquivalentFlowTree:84 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'lastInvokedTarget'..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.MaximumFlowAlgorithmBase:210 Rule:UselessParentheses Priority:4 Useless parentheses around `(comparator.compare(edge.flow, 0.0) == 0) || (c...`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PadbergRaoOddMinimumCutset:169 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'PadbergRaoOddMinimumCutset': 'isOddVertexSet' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PadbergRaoOddMinimumCutset:236 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'PadbergRaoOddMinimumCutset': 'isOddVertexSet' is already in scope.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:259 Rule:UselessParentheses Priority:4 Useless parentheses around `(ex.getSource().excess >= 0.0) && (ex.getTarget...`..
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:332 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.PushRelabelMFImpl:412 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.flow.mincost.CapacityScalingMinimumCostFlow:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.independentset.ChordalGraphIndependentSetFinder:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.traverse.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.interfaces.HamiltonianCycleImprovementAlgorithm:49 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'improveTour': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.ColorRefinementIsomorphismInspector:259 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.IsomorphicGraphMapping:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2GraphIsomorphismState:45 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2GraphIsomorphismState:46 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2State:429 Rule:UselessParentheses Priority:4 Useless parentheses around `new String(indent)`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2SubgraphIsomorphismState:45 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.isomorphism.VF2SubgraphIsomorphismState:46 Rule:UselessParentheses Priority:4 Useless parentheses around `DEBUG`..
+[WARNING] PMD Failure: org.jgrapht.alg.lca.EulerTourRMQLCAFinder:112 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'org.jgrapht.util': 'MathUtil' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.DenseEdmondsMaximumCardinalityMatching:25 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.GreedyWeightedMatching:137 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.HopcroftKarpMaximumCardinalityBipartiteMatching:189 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.HopcroftKarpMaximumCardinalityBipartiteMatching:213 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.KuhnMunkresMatrixImplementation:406 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.SparseEdmondsMaximumCardinalityMatching:23 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:299 Rule:UselessParentheses Priority:4 Useless parentheses around `path1[hw] != strue && path2[hv] != strue`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:382 Rule:UselessParentheses Priority:4 Useless parentheses around `numberOfUnlabeled == 2 ? 0 : 2`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.Algorithm:390 Rule:UselessParentheses Priority:4 Useless parentheses around `numberOfUnlabeled <= 2 ? 2 : 3`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.SparseEdmondsMaximumCardinalityMatching:534 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:137 Rule:UselessParentheses Priority:4 Useless parentheses around `root.tree.eps`..
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:159 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:200 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:292 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:314 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVDualUpdater:320 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'KolmogorovWeightedPerfectMatching': 'INFINITY' is already in scope because it is imported in this file.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.BlossomVInitializer:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.alg.matching.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:145 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'MatchingAlgorithm': 'DEFAULT_EPSILON' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.alg.matching.blossom.v5.KolmogorovWeightedPerfectMatching:432 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.partition.BipartitePartitioning:76 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.alg.scoring.BetweennessCentrality:270 Rule:UselessParentheses Priority:4 Useless parentheses around `sigma.get(v).doubleValue() / sigma.get(w).doubl...`..
+[WARNING] PMD Failure: org.jgrapht.alg.scoring.Algorithm:247 Rule:UselessParentheses Priority:4 Useless parentheses around `sigma.get(v).doubleValue() / sigma.get(w).doubl...`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.AllDirectedPaths:174 Rule:UselessParentheses Priority:4 Useless parentheses around `sourceVertices.isEmpty()`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.AllDirectedPaths:174 Rule:UselessParentheses Priority:4 Useless parentheses around `targetVertices.isEmpty()`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.BoundedPrunedYenKShortestPath:194 Rule:UnusedFormalParameter Priority:3 Avoid unused method parameters such as 'sink'..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.BoundedPrunedYenKShortestPath:339 Rule:AvoidBranchingStatementAsLastInLoop Priority:2 Avoid using a branching statement as the last in a loop..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.CHManyToManyShortestPaths:29 Rule:UnnecessaryImport Priority:4 Unused static import 'org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionHierarchyBidirectionalDijkstra:32 Rule:UnnecessaryImport Priority:4 Unused static import 'org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionHierarchyPrecomputation:409 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionTask:1207 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * taskId`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.ContractionTask:1219 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * (taskId + 1)`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.DeltaSteppingShortestPath:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.DeltaSteppingShortestPath:89 Rule:UnusedPrivateField Priority:3 Avoid unused private fields such as 'DEFAULT_PARALLELISM'..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.EppsteinShortestPathIterator:415 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.MartinShortestPath:83 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'BaseMultiObjectiveShortestPathAlgorithm': 'GRAPH_MUST_CONTAIN_THE_SOURCE_VERTEX' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.PathValidator:49 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'public' on method 'isValidPath': the method is declared in an interface type.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:18 Rule:TooManyStaticImports Priority:3 Too many static imports may lead to messy code.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:1296 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * taskId`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingPrecomputation:1308 Rule:UselessParentheses Priority:4 Useless parentheses around `(segmentEnd - segmentStart) * (taskId + 1)`..
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TransitNodeRoutingShortestPath:18 Rule:TooManyStaticImports Priority:3 Too many static imports may lead to messy code.
+[WARNING] PMD Failure: org.jgrapht.alg.shortestpath.TreeMeasurer:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.spanning.ImprovementGraph:1126 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.alg.spanning.GreedyMultiplicativeSpanner:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.ChristofidesThreeHalvesApproxMetricTSP:26 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:171 Rule:UselessParentheses Priority:4 Useless parentheses around `j == 0 ? tour[i - 1] : tour[j - 1]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:172 Rule:UselessParentheses Priority:4 Useless parentheses around `j == i ? tour[0] : tour[j]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.FarthestInsertionHeuristicTSP:176 Rule:UselessParentheses Priority:4 Useless parentheses around `x == y ? 0 : allDist[x][y]`..
+[WARNING] PMD Failure: org.jgrapht.alg.tour.GreedyHeuristicTSP:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.PalmerHamiltonianCycle:96 Rule:EmptyControlStatement Priority:3 Empty while statement.
+[WARNING] PMD Failure: org.jgrapht.alg.tour.TwoApproxMetricTSP:24 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:95 Rule:UselessParentheses Priority:4 Useless parentheses around `ux.neighbors.get(vx).equals(vx.neighbors.get(ux))`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:101 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.size() == vertexEncapsulationMap.s...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:109 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().allMatch(ux -> vx...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.ClarksonTwoApproxVCImpl:135 Rule:UselessParentheses Priority:4 Useless parentheses around `!workingGraph.parallelStream().anyMatch(ux -> u...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:108 Rule:UselessParentheses Priority:4 Useless parentheses around `ux.neighbors.get(vx).intValue() == vx.neighbors...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:114 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.size() == vertexEncapsulationMap.s...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:122 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().allMatch(ux -> vx...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.GreedyVCImpl:145 Rule:UselessParentheses Priority:4 Useless parentheses around `workingGraph.parallelStream().noneMatch(ux -> u...`..
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.util.RatioVertex:20 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.alg.vertexcover.util.RatioVertex:77 Rule:UselessParentheses Priority:4 Useless parentheses around `neighbors.values().stream().mapToInt(Integer::i...`..
+[WARNING] PMD Failure: org.jgrapht.generate.CompleteBipartiteGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomBipartiteGraphGenerator:185 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomGraphGenerator:226 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.generate.GnmRandomGraphGenerator:275 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomBipartiteGraphGenerator:157 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomGraphGenerator:153 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.GnpRandomGraphGenerator:171 Rule:CollapsibleIfStatements Priority:3 This if statement could be combined with its parent.
+[WARNING] PMD Failure: org.jgrapht.generate.KleinbergSmallWorldGraphGenerator:169 Rule:UselessParentheses Priority:4 Useless parentheses around `j + dj`..
+[WARNING] PMD Failure: org.jgrapht.generate.PlantedPartitionGraphGenerator:22 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:110 Rule:UselessParentheses Priority:4 Useless parentheses around `n * d`..
+[WARNING] PMD Failure: org.jgrapht.generate.RandomRegularGraphGenerator:259 Rule:UselessParentheses Priority:4 Useless parentheses around `n * d`..
+[WARNING] PMD Failure: org.jgrapht.generate.WattsStrogatzGraphGenerator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGenerator:456 Rule:UselessParentheses Priority:4 Useless parentheses around `6 * transshipmentNodeNum`..
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGenerator:540 Rule:JumbledIncrementer Priority:3 Avoid modifying an outer loop incrementer in an inner loop for update expression.
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGeneratorConfig:369 Rule:UselessParentheses Priority:4 Useless parentheses around `tNodeNum - 1`..
+[WARNING] PMD Failure: org.jgrapht.generate.netgen.NetworkGeneratorConfig:370 Rule:UselessParentheses Priority:4 Useless parentheses around `sinkNum - 1`..
+[WARNING] PMD Failure: org.jgrapht.graph.AbstractGraph:225 Rule:UselessParentheses Priority:4 Useless parentheses around `pairing`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsSubgraph:261 Rule:UselessParentheses Priority:4 Useless parentheses around `base.getEdgeSource(e) == sourceVertex`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsSubgraph:262 Rule:UselessParentheses Priority:4 Useless parentheses around `base.getEdgeTarget(e) == targetVertex`..
+[WARNING] PMD Failure: org.jgrapht.graph.AsUndirectedGraph:134 Rule:UselessOverridingMethod Priority:3 Overriding method merely calls super.
+[WARNING] PMD Failure: org.jgrapht.graph.AsUnweightedGraph:60 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DefaultListenableGraph:125 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DefaultListenableGraph:137 Rule:UnnecessaryFullyQualifiedName Priority:4 Unnecessary qualifier 'Graph': 'DEFAULT_EDGE_WEIGHT' is already in scope because it is inherited by an enclosing type.
+[WARNING] PMD Failure: org.jgrapht.graph.DirectedAcyclicGraph:483 Rule:EmptyCatchBlock Priority:3 Avoid empty catch blocks.
+[WARNING] PMD Failure: org.jgrapht.graph.Region:888 Rule:UselessParentheses Priority:4 Useless parentheses around `finish - start`..
+[WARNING] PMD Failure: org.jgrapht.graph.VisitedArrayListImpl:1015 Rule:UselessParentheses Priority:4 Useless parentheses around `affectedRegion.finish - affectedRegion.start`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:106 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList.isEmpty() ? null : vertexList.get(0)`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:107 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList.isEmpty() ? null : vertexList.get(ve...`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:169 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeList != null ? edgeList : GraphPath.super.g...`..
+[WARNING] PMD Failure: org.jgrapht.graph.GraphWalk:175 Rule:UselessParentheses Priority:4 Useless parentheses around `vertexList != null ? vertexList : GraphPath.sup...`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:270 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:281 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:301 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.MaskSubgraph:312 Rule:UselessParentheses Priority:4 Useless parentheses around `edgeSet().contains(edge)`..
+[WARNING] PMD Failure: org.jgrapht.graph.builder.GraphBuilder:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.graph.*'.
+[WARNING] PMD Failure: org.jgrapht.graph.builder.GraphBuilder:23 Rule:UnnecessaryImport Priority:4 Unused import 'java.util.function.*'.
+[WARNING] PMD Failure: org.jgrapht.traverse.BreadthFirstIterator:96 Rule:UselessParentheses Priority:4 Useless parentheses around `edge == null ? 0 : getSeenData(Graphs.getOpposi...`..
+[WARNING] PMD Failure: org.jgrapht.traverse.CrossComponentIterator:219 Rule:UselessParentheses Priority:4 Useless parentheses around `isCrossComponentTraversal()`..
+[WARNING] PMD Failure: org.jgrapht.traverse.VisitColor:51 Rule:UnnecessaryModifier Priority:3 Unnecessary modifier 'static' on enum 'VisitColor': nested enums are implicitly static.
+[WARNING] PMD Failure: org.jgrapht.traverse.DepthFirstIterator:163 Rule:UselessParentheses Priority:4 Useless parentheses around `found`..
+[WARNING] PMD Failure: org.jgrapht.traverse.MaximumCardinalityIterator:21 Rule:UnnecessaryImport Priority:4 Unused import 'org.jgrapht.util.*'.
+[WARNING] PMD Failure: org.jgrapht.util.ReversedDoublyLinkedListView:2047 Rule:UselessOverridingMethod Priority:3 Overriding method merely calls super.
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for JGraphT - Parent 1.6.0-SNAPSHOT:
+[INFO] 
+[INFO] JGraphT - Parent ................................... SUCCESS [  3.501 s]
+[INFO] JGraphT - Core ..................................... FAILURE [ 11.718 s]
+[INFO] JGraphT - I/O ...................................... SKIPPED
+[INFO] JGraphT - OSM ...................................... SKIPPED
+[INFO] JGraphT - Optimized Graphs ......................... SKIPPED
+[INFO] JGraphT - Ext ...................................... SKIPPED
+[INFO] JGraphT - Guava Adapter ............................ SKIPPED
+[INFO] JGraphT - Unimi dsi ................................ SKIPPED
+[INFO] JGraphT - Demo ..................................... SKIPPED
+[INFO] JGraphT - Distributable Archives ................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.388 s
+[INFO] Finished at: 2026-06-16T03:26:05+06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-pmd-plugin:3.28.0:check (default-cli) on project jgrapht-core: PMD 7.17.0 has found 171 violations. For more details see: E:\avra\2-2\dp\opensource\jgrapht\jgrapht-core\target\pmd.xml -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :jgrapht-core
