@@ -1,0 +1,60 @@
+PHASE 6 - GITHUB SUBMISSION EVIDENCE
+====================================
+
+Verified: 2026-06-25
+
+GitHub account:
+https://github.com/Avraaaa
+
+Original repository:
+https://github.com/jgrapht/jgrapht
+
+Forked repository:
+https://github.com/Avraaaa/jgrapht
+
+GitHub fork metadata:
+full_name: Avraaaa/jgrapht
+fork: true
+parent: jgrapht/jgrapht
+default branch: master
+
+Pull request:
+https://github.com/jgrapht/jgrapht/pull/1355
+
+PR number: 1355
+PR title: Refactor Boykov-Kolmogorov orphan adoption
+PR author: Avraaaa
+PR state: open
+Draft: false
+Merged: false
+Mergeable state: clean
+Created: 2026-06-18T19:45:47Z
+Base branch: jgrapht:master
+Head branch: Avraaaa:refactor-boykov-kolmogorov-adopt
+Commits: 1
+Changed files: 1
+Additions: 152
+Deletions: 105
+
+Commit:
+6183e894718be159d82a2182a72ca3bfb08b2a90
+
+Commit subject:
+Refactor Boykov-Kolmogorov orphan adoption
+
+Upstream CI checks:
+Build (Windows): success
+Build (Ubuntu): success
+Build (macOS): success
+
+Instructor requirements:
+[PASS] Fork original repository
+[PASS] Create feature/refactor branch
+[PASS] Apply and push improvement
+[PASS] Submit pull request to original repository
+[PASS] Clear title
+[PASS] Description states addressed issue
+[PASS] Description explains improvement
+[PASS] Description summarizes refactoring
+[PASS] Description assures unchanged behavior
+[PASS] Tests listed in pull request
